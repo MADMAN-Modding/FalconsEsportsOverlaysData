@@ -18,8 +18,8 @@
     },
     "versions": {
         "ssbu"          : 1.0,
-        "kart"          : 1.0,
-        "kartOneScreen" : 1.0,
+        "kart"          : 1.1,
+        "kartOneScreen" : 1.1,
         "overwatch"     : 1.0,
         "rocketLeague"  : 1.0,
         "splat"         : 1.0,
