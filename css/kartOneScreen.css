@@ -1,0 +1,94 @@
+:root {
+    --homeTheme: #bf0f35;
+    --awayTheme: #9c9c9c;
+}
+
+.homeTheme {
+    fill: var(--homeTheme);
+}
+
+.awayTheme {
+    fill: var(--awayTheme);
+}
+
+html,
+body {
+    border: none;
+    margin: none;
+}
+
+.cls-1 {
+    letter-spacing: -.03em;
+}
+
+.cls-2 {
+    font-size: 26.5px;
+}
+
+#playerNamesLeft,
+#playerNamesRight {
+    font-size: 15px;
+}
+
+#week {
+    font-size: 25px;
+}
+
+.cls-2,
+.cls-3,
+.cls-4 {
+    fill: #fff;
+    font-family: EthnocentricRg-Regular, Ethnocentric;
+}
+
+.cls-5 {
+    letter-spacing: -.17em;
+}
+
+.cls-6 {
+    fill: var(--homeTheme);
+}
+
+.cls-7 {
+    letter-spacing: -.24em;
+}
+
+.cls-8 {
+    letter-spacing: -.03em;
+}
+
+.cls-9 {
+    letter-spacing: -.03em;
+}
+
+.cls-10 {
+    letter-spacing: -.04em;
+}
+
+.cls-11 {
+    letter-spacing: -.05em;
+}
+
+.cls-12 {
+    fill: var(--homeTheme);
+}
+
+.cls-12,
+.cls-13 {
+    opacity: .44;
+}
+
+.cls-3 {
+    font-size: 26px;
+}
+
+.cls-4 {
+    font-size: 28px;
+}
+
+#schoolLogo {
+    position: absolute;
+    left: 71px;
+    top: 664px;
+    width: 325px;
+}
