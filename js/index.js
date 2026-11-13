@@ -1,23 +1,16 @@
-let overlayiFrame;
-let i = 0;
-setInterval(function () {
-  fetch("../json/overlay.json?" + i)
-    .then((response) => response.json())
-    .then((jsonData) => {
-      overlayiFrame = document.getElementById("overlayiFrame");
+const overlayFrame = document.getElementById("overlayiFrame");
+let currentOverlay = null;
 
-      // Returns if the overlay is already set
-      if (overlayiFrame.src.includes(jsonData["overlay"])) {
-        return;
-      }
+// Loads whichever overlay overlay.json selects
+subscribeOverlayState(({ overlay }) => {
+  if (!overlay || overlay === currentOverlay) return;
 
-      // Loads the correct overlay
-      overlayiFrame.src =
-        window.location.href + "/overlays/" + jsonData["overlay"] + ".html";
+  currentOverlay = overlay;
 
-      document.title =
-        jsonData["overlay"].charAt(0).toUpperCase() +
-        jsonData["overlay"].slice(1);
-    });
-  i = Math.floor(Math.random() * 1000000);
-}, 200);
+  overlayFrame.src = new URL(
+    "overlays/" + encodeURIComponent(overlay) + ".html",
+    window.location.href
+  ).href;
+
+  document.title = overlay.charAt(0).toUpperCase() + overlay.slice(1);
+}, 500);

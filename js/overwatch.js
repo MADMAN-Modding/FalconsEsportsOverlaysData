@@ -1,46 +1,33 @@
-let i = 0;
-
-setInterval(function () {
-   fetch('../json/overlay.json?' + i)
-        .then((response) => response.json())
-        .then((jsonData) => {
-
-            // Gets the value of jsonData as an int
-            const winsLeft = +jsonData["winsLeft"];
-            const winsRight = +jsonData["winsRight"];
-
-            // Update the left side rounds won
-            for (let i = 1; i <= 3; i++) {
-                document.getElementById(`leftRoundsWon${i}`).style.backgroundColor = winsLeft >= i ? "white" : "black";
-            }
-
-            // Update the right side rounds won
-            for (let i = 1; i <= 3; i++) {
-                document.getElementById(`rightRoundsWon${i}`).style.backgroundColor = winsRight >= i ? "white" : "black";
-            }
-            
-            // Sets all the home team respective colors
-            let teamColorLeft = jsonData["teamColorLeft"];
-            changeBackgroundColor("teamNameLeftBackground", teamColorLeft);
-            changeBackgroundColor("leftRoundsBack", teamColorLeft);
-            changeBackgroundColor("weekBackground", teamColorLeft);
-
-            // Set the away team respective colors
-            let teamColorRight = jsonData["teamColorRight"];
-
-            changeBackgroundColor("teamNameRightBackground", teamColorRight);
-            changeBackgroundColor("rightRoundsBack", teamColorRight);
-
-            // Update Text values
-            document.getElementById("teamNameLeft").innerHTML = jsonData["teamNameLeft"];
-            document.getElementById("teamNameRight").innerHTML = jsonData["teamNameRight"];
-            document.getElementById("week").innerHTML = jsonData["week"];
-
-        });
-    i = Math.floor(Math.random() * 1000000);
-}, 2000);
-
-
 function changeBackgroundColor(id, color) {
-    document.getElementById(id).style.backgroundColor = color;
+  document.getElementById(id).style.backgroundColor = color;
 }
+
+onOverlayState((state) => {
+  // Gets the value of state as an int
+  const winsLeft = +state["winsLeft"];
+  const winsRight = +state["winsRight"];
+
+  // Update the rounds won
+  setRounds("left", 3, winsLeft, (element, won) => {
+    element.style.backgroundColor = won ? "white" : "black";
+  });
+  setRounds("right", 3, winsRight, (element, won) => {
+    element.style.backgroundColor = won ? "white" : "black";
+  });
+
+  // Sets all the home team respective colors
+  const teamColorLeft = state["teamColorLeft"];
+  changeBackgroundColor("teamNameLeftBackground", teamColorLeft);
+  changeBackgroundColor("leftRoundsBack", teamColorLeft);
+  changeBackgroundColor("weekBackground", teamColorLeft);
+
+  // Set the away team respective colors
+  const teamColorRight = state["teamColorRight"];
+  changeBackgroundColor("teamNameRightBackground", teamColorRight);
+  changeBackgroundColor("rightRoundsBack", teamColorRight);
+
+  // Update Text values
+  setText("teamNameLeft", state["teamNameLeft"]);
+  setText("teamNameRight", state["teamNameRight"]);
+  setText("week", state["week"]);
+});

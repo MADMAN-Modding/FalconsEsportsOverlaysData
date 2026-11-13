@@ -17,12 +17,12 @@
         "rivals"        : "Marvel Rivals"
     },
     "versions": {
-        "ssbu"          : 1,
-        "kart"          : 2,
-        "kartOneScreen" : 4,
-        "overwatch"     : 1,
-        "rocketLeague"  : 1,
-        "splat"         : 1,
+        "ssbu"          : 2,
+        "kart"          : 3,
+        "kartOneScreen" : 5,
+        "overwatch"     : 2,
+        "rocketLeague"  : 2,
+        "splat"         : 2,
         "val"           : 1,
         "hearth"        : 1,
         "lol"           : 1,

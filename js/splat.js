@@ -1,34 +1,19 @@
-let i = 0;
+onOverlayState((state) => {
+  const winsLeft = +state["winsLeft"];
+  const winsRight = +state["winsRight"];
 
-setInterval(function () {
-  fetch("../json/overlay.json?" + i)
-    .then((response) => response.json())
-    .then((jsonData) => {
-      const winsLeft = +jsonData["winsLeft"];
-      const winsRight = +jsonData["winsRight"];
+  // Update the rounds won
+  setRounds("left", 3, winsLeft, (element, won) => {
+    element.style.fill = won ? state["teamColorLeft"] : "black";
+  });
+  setRounds("right", 3, winsRight, (element, won) => {
+    element.style.fill = won ? state["teamColorRight"] : "black";
+  });
 
-      // Update the left side rounds won
-      for (let i = 1; i <= 3; i++) {
-        document.getElementById(`leftRoundsWon${i}`).style.fill =
-          winsLeft >= i ? jsonData["teamColorLeft"] : "black";
-      }
+  document.getElementById("overlay").style.fill = state["teamColorLeft"];
 
-      // Update the right side rounds won
-      for (let i = 1; i <= 3; i++) {
-        document.getElementById(`rightRoundsWon${i}`).style.fill =
-          winsRight >= i ? jsonData["teamColorRight"] : "black";
-      }
-
-      document.getElementById("overlay").style.fill = jsonData["teamColorLeft"];
-
-      // document.getElementById("weekText").style.color = jsonData["teamColorLeft"];
-
-      // Updates the Team Names and week
-      document.getElementById("teamNameLeft").innerHTML =
-        jsonData["teamNameLeft"];
-      document.getElementById("teamNameRight").innerHTML =
-        jsonData["teamNameRight"];
-      document.getElementById("week").innerHTML = jsonData["week"];
-    });
-  i = Math.floor(Math.random() * 1000000);
-}, 2000);
+  // Updates the Team Names and week
+  setText("teamNameLeft", state["teamNameLeft"]);
+  setText("teamNameRight", state["teamNameRight"]);
+  setText("week", state["week"]);
+});

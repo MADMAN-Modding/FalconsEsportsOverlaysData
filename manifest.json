@@ -1,0 +1,193 @@
+{
+  "schema": 1,
+  "shared": [
+    {
+      "path": "index.html",
+      "sha256": "9f32705ce3e1c1a220f2a1f34e389cb483d98aa0e5fa79cf67fcd4ad5c39bb64",
+      "size": 531
+    },
+    {
+      "path": "css/index.css",
+      "sha256": "e758dbcbab5be3e0b2480d244ca022224fc89d918be55102a9efc685d6417841",
+      "size": 1901
+    },
+    {
+      "path": "js/index.js",
+      "sha256": "3e7edd1aa3a81ff90edd45eac3eaa599bb04f24f3428a71eca3c429431e6f488",
+      "size": 483
+    },
+    {
+      "path": "js/state.js",
+      "sha256": "16628ce94d70b8a3eba43069f261a8eacee54431758a5cd03032eac9055d72a3",
+      "size": 1388
+    },
+    {
+      "path": "js/overlays.js",
+      "sha256": "4eba8b3e21236be5f81b04f752f44c796d6028893a196e36db125f45d4ee6e2f",
+      "size": 1855
+    },
+    {
+      "path": "css/ethnocentric.woff",
+      "sha256": "7e9419a547c59c10f80ff0bab83c7a09af5c1e8da2fca9b1b4f44727ff2b732b",
+      "size": 16460
+    }
+  ],
+  "defaults": [
+    {
+      "path": "images/Esports-Logo.png",
+      "sha256": "9b772f5d8bda41e15b7ffe064141283630e1ccd97acf4e4da132b53816c4903e",
+      "size": 216141
+    }
+  ],
+  "overlays": {
+    "kart": {
+      "files": [
+        {
+          "path": "css/kart.css",
+          "sha256": "6bde749428c06087c6cac0669ed4e78a8c1e6c9a3f0f8988b60166d4c96bac95",
+          "size": 3449
+        },
+        {
+          "path": "js/kart.js",
+          "sha256": "21d3b8e881baa9b6e88b4b4ff3e98f8d2bb5987f63259056c07d5b1d01bfe30b",
+          "size": 1640
+        },
+        {
+          "path": "overlays/images/kart.png",
+          "sha256": "4e7ea01fbc4b7abca3372fee1bcf6d8df3e7d1fe16b45d2bf4e3eddd790b9eb1",
+          "size": 262230
+        },
+        {
+          "path": "overlays/kart.html",
+          "sha256": "b436c68668fc6441d02e0a905b5662b6b78d2d47b8c1f1eecd76b1318e1e332c",
+          "size": 3615
+        }
+      ]
+    },
+    "kartOneScreen": {
+      "files": [
+        {
+          "path": "css/kartOneScreen.css",
+          "sha256": "157c95465b863ccb82936a03d571033f165d1efbdb549c911c4c6d77acfe3edd",
+          "size": 1082
+        },
+        {
+          "path": "js/kartOneScreen.js",
+          "sha256": "2fe311b5b245960ebdbea39f1a2d736ab5ca6a8411e4974a5371450f85dc3ddd",
+          "size": 753
+        },
+        {
+          "path": "overlays/images/kartOneScreen.png",
+          "sha256": "bddacfe7c48dba93d39dbc1f665c04811b681bcb358143d97218df1d5a285e3c",
+          "size": 246655
+        },
+        {
+          "path": "overlays/kartOneScreen.html",
+          "sha256": "d0a654731fd7f6c7e2edc2e50a625df41ef9d5d52516f21caa1ba1ad44aa277b",
+          "size": 2468
+        }
+      ]
+    },
+    "overwatch": {
+      "files": [
+        {
+          "path": "css/overwatch.css",
+          "sha256": "1a87cfe495253952e5459b01fee55610bfabcc35588cb37f251e566cb5dc4d9b",
+          "size": 3311
+        },
+        {
+          "path": "js/overwatch.js",
+          "sha256": "027259927fbb0f7f61db03f9b2ac31fe077521d241718448c797815e080c9452",
+          "size": 1187
+        },
+        {
+          "path": "overlays/images/overwatch.png",
+          "sha256": "4ff6ffc76bd5b0660198825d839f330632c6dd93e53c723abc4ac9e43c013dac",
+          "size": 45110
+        },
+        {
+          "path": "overlays/overwatch.html",
+          "sha256": "95773f7538a7f8ca27f7e1b37a754cf3ed88b526b236289ae4c10bded7c30cc8",
+          "size": 866
+        }
+      ]
+    },
+    "rocketLeague": {
+      "files": [
+        {
+          "path": "css/rocketLeague.css",
+          "sha256": "5b1f31ecaad5c2a4effd23d4415a35dedf06d3632e648b3e2d33f94e88dee93e",
+          "size": 2543
+        },
+        {
+          "path": "js/rocketLeague.js",
+          "sha256": "6fa9b22de5d59ea59b8c547ac639de090ac3f8ba41666dca4844f6b599e6d7f3",
+          "size": 1096
+        },
+        {
+          "path": "overlays/images/rocketLeague.png",
+          "sha256": "5173059f220f9815480345a3bf9cf72a5a63434e2a3f2fd53e0b96efef5e62de",
+          "size": 153832
+        },
+        {
+          "path": "overlays/rocketLeague.html",
+          "sha256": "9a869d992dc4d8db612a0ac738971fb650150e02db3bdd4c422b513f7f111ad1",
+          "size": 5310
+        }
+      ]
+    },
+    "splat": {
+      "files": [
+        {
+          "path": "css/rocketLeague.css",
+          "sha256": "5b1f31ecaad5c2a4effd23d4415a35dedf06d3632e648b3e2d33f94e88dee93e",
+          "size": 2543
+        },
+        {
+          "path": "css/splat.css",
+          "sha256": "ea5f397099caf773a5b0ec1aa3aa2c901d1a2d6cb475dfe864fe81166a12052f",
+          "size": 1214
+        },
+        {
+          "path": "js/splat.js",
+          "sha256": "4d42d03bc7d0898e78bca81b5ed502353b1e8b87324f16818f18b9c97c7e8275",
+          "size": 640
+        },
+        {
+          "path": "overlays/images/splat.png",
+          "sha256": "96605aaa63cc2b67e6afa5d5f206aa08cfb58fe5e24881953f2552c478806670",
+          "size": 93326
+        },
+        {
+          "path": "overlays/splat.html",
+          "sha256": "a78a927a4acb1e28006117f375705d4709f89eae1e3cec7a1ca0cc7991526370",
+          "size": 3769
+        }
+      ]
+    },
+    "ssbu": {
+      "files": [
+        {
+          "path": "css/ssbu.css",
+          "sha256": "7638b1190f302a5b9ed8578d1efce59e5acb9260987b7c0d2597a32801cbf38b",
+          "size": 4023
+        },
+        {
+          "path": "js/ssbu.js",
+          "sha256": "c7d1bb3626018131073c0352d694099c78731623fe0442c7a30fb5a056a6a858",
+          "size": 1096
+        },
+        {
+          "path": "overlays/images/ssbu.png",
+          "sha256": "80106f1dc31fab02c1b94189c6134e53909a3bff872b1c939bb15b1fa6a0c284",
+          "size": 9315
+        },
+        {
+          "path": "overlays/ssbu.html",
+          "sha256": "88754ae7bf849c782bbeadf25462bb49924eaa7ec1bc0501b343b4584a19816a",
+          "size": 990
+        }
+      ]
+    }
+  }
+}
